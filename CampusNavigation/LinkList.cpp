@@ -86,3 +86,14 @@ void PlacesCheck(){
     scanf("%d",&i);
     printf("查找结果:%s\n", Search(P, i));
 }
+
+int IsInsisted(Places P,int ID){
+    Place* Pointer=P.Start;
+    while (Pointer!=NULL) {
+        if (Pointer->num == ID) {
+            return 1;
+        }
+        Pointer=Pointer->next;
+    }
+    return 0;
+}
