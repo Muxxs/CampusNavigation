@@ -43,6 +43,7 @@ IdLine* CreateIdLine(Graph *G,int Id){
     IdLine *NewIdLine = (IdLine*)malloc(sizeof(IdLine));
     NewIdLine->ID = Id;
     NewIdLine->NextLine = G->Start;
+    NewIdLine->Start = NULL;
     G->Start = NewIdLine;
     return NewIdLine;
 }
@@ -55,7 +56,7 @@ void GraphPush(Graph *G,int IDStart,int IDEnd,int Weight){ // 插入一个边
     Edge *NewEdge = (Edge*)malloc(sizeof(Edge));
     NewEdge->ToId = IDEnd;
     NewEdge->weight = Weight;
-    NewEdge->next = NULL;
+    NewEdge->next = Line->Start;
     Line->Start = NewEdge;
 }
 

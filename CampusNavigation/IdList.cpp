@@ -53,21 +53,6 @@ int IdsPull(Ids* I,int id){ // 已存在返回0 不存在插入后为1
     return 0;
 }
 
-int IdsBack(Ids* I){
-    ID * Pointer = I->id;
-    int ret=0;
-    while (Pointer!=NULL) {
-        if (Pointer->next->next==NULL) {
-            ret = Pointer->next->num;
-            free(Pointer->next);
-            Pointer->next=NULL;
-            return ret;
-        }else{
-            Pointer = Pointer->next;
-        }
-    }
-    return 0;// 无路可退
-}
 
 int IdsInsisted(Ids * I, int Id){ // 是否存在 1存在 不存在返回ID
     ID * Pointer = I->id;
@@ -91,11 +76,15 @@ void IdsDestroy(Ids *I){
     free(I);
 }
 
-void ShowIdList(Ids *I){
+int LastIdsId(Ids *I){
     ID * Pointer = I->id;
-    while (Pointer!=NULL) {
-        printf("->%d",Pointer->num);
-        Pointer=Pointer->next;
+    int ret=I->id->num;
+    if (Pointer==NULL) {
+        return I->id->num;
     }
-    printf("\n");
+    while(Pointer->next!=NULL) {
+        ret = Pointer->num;
+        Pointer = Pointer->next;
+    }
+    return ret;
 }
