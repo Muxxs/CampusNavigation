@@ -61,7 +61,7 @@ int IdsBack(Places P,Ids* I){
             ret = Pointer->next->num;
             free(Pointer->next);
             Pointer->next=NULL;
-            printf("Back From %s\n",Search(P,Pointer->num));
+            printf("Back From %s\n",Search(P,ret));
             return ret;
         }else{
             Pointer = Pointer->next;
@@ -135,7 +135,7 @@ void SearchRoad(Places P,Graph g){
 }
 
 
-void InforInit(){
+void Run(){
     Places P;
     PlacesInit(&P);
     PlacesPutIn(&P);
@@ -147,7 +147,7 @@ void InforInit(){
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    InforInit();
+    Run();
     printf("Goodbye!\n");
     return 0;
 }

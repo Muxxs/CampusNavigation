@@ -82,7 +82,7 @@ int LastIdsId(Ids *I){
     if (Pointer==NULL) {
         return I->id->num;
     }
-    while(Pointer->next!=NULL) {
+    while(Pointer!=NULL) {
         ret = Pointer->num;
         Pointer = Pointer->next;
     }

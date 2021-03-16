@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D13E0BC0260047EF00A78BAE /* Test.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Test.strings; sourceTree = "<group>"; };
 		D159B60725F66B0400E14DAD /* CampusNavigation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CampusNavigation; sourceTree = BUILT_PRODUCTS_DIR; };
 		D159B60A25F66B0400E14DAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D159B61225F704FB00E14DAD /* Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 				D159B61725F7060E00E14DAD /* LinkList.hpp */,
 				D1B41D3525FDC576002695E6 /* IdList.cpp */,
 				D1B41D3625FDC576002695E6 /* IdList.hpp */,
+				D13E0BC0260047EF00A78BAE /* Test.strings */,
 			);
 			path = CampusNavigation;
 			sourceTree = "<group>";
